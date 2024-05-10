@@ -13,3 +13,13 @@ Due to poor planning on my part, I won't have time to implement batching at all,
 ironic given that this will affect theoretical performance of this application
 far more than asyncIO does. 
 
+I've also aggressively limited the scope here, in a way I would not in a real working situation.
+For example this solution does not support adding new transactions after classification.
+
+it's also missing some really low-hanging fruit functionalities, such as being able to apply a custom 
+classification to all transactions to a given recipientId. This would be quite easy to add
+but <s>my friends just arrived and want me to light up the BBQ</s> Anna Dahlen says we have
+to prioritize other functionality for now. ;)
+
+Testing is also very minimal, especially considering that this is a banking environment. Tests verifying 
+at least a few failure modes is minimal in any production code, but for a codingtest like this, i hope you'll forgive this shortcut.
