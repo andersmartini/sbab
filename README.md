@@ -9,9 +9,7 @@ making any performanceboost an async approach could deliver moot.
 Still, I wanted to demonstrate my familiarity with the concept,
 so I used it anyway.
 
-I will confess here that I was a little confused about some details on this assignment.
-Specifically I wonder at the types used in the provided JSON:
-why is amount specified as a String? it seems to me that a number would make more sense, unless I'm missing something?
-
-
+Due to poor planning on my part, I won't have time to implement batching at all, which is kinda
+ironic given that this will affect theoretical performance of this application
+far more than asyncIO does. 
 

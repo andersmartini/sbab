@@ -6,6 +6,7 @@ import com.google.gson.reflect.TypeToken;
 import io.reactivex.rxjava3.core.Flowable;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Service
 public class TransactionApi {
     private List<Transaction> transactions;
 
