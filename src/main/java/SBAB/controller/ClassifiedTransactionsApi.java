@@ -19,17 +19,17 @@ public class ClassifiedTransactionsApi {
     }
 
     @GetMapping("/transactions/{userId}")
-    public Single<List<ClassifiedTransaction>> getTransactions(@PathVariable String userId) {
+    public Single<List<ClassifiedTransaction>> getTransactions(@PathVariable("userId") String userId) {
         return classifiedTransactionService.getClassifiedTransactionsByUserId(userId).toList();
     }
 
     @PostMapping("/transactions/{userId}/bydate")
-    public Single<List<ClassifiedTransaction>> getTransactionsByDate(@PathVariable String userId, @RequestBody Interval interval){
+    public Single<List<ClassifiedTransaction>> getTransactionsByDate(@PathVariable("userId") String userId, @RequestBody Interval interval){
         return classifiedTransactionService.getTransactionsForUserInInterval(userId, interval).toList();
     }
 
     @PutMapping("/transactions/{userId}")
-    public Single<List<ClassifiedTransaction>> updateTransaction(@PathVariable String userId, @RequestBody ClassifiedTransaction classifiedTransaction) {
+    public Single<List<ClassifiedTransaction>> updateTransaction(@PathVariable("userId") String userId, @RequestBody ClassifiedTransaction classifiedTransaction) {
         return classifiedTransactionService.overrideClassifications(userId, classifiedTransaction);
     }
 
